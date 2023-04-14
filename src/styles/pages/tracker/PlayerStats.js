@@ -22,10 +22,10 @@ export const PlayerStats = styled("div", {
     flexDirection: "column",
     alignItems: "center",
     height: 400,
+    gap: '1rem',
   },
-  '.List':{
-display: 'grid',
-gridTemplateColumns: '1fr 1fr 1fr'
-
-  }
+  ".List": {
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr 1fr",
+  },
 });

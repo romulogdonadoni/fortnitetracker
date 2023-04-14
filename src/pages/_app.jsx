@@ -1,5 +1,6 @@
 import { NavBar } from "@/styles/pages/app";
 import { globalStyles } from "@/styles/pages/global";
+import { styled } from "@stitches/react";
 import Link from "next/link";
 import { MagnifyingGlass } from "phosphor-react";
 import { useState } from "react";
@@ -17,8 +18,17 @@ export default function App({ Component, pageProps }) {
           <MagnifyingGlass size={20} weight="bold" color="#000" />
         </Link>
       </NavBar>
-      <Component {...pageProps} />
+      <Content>
+        <Component {...pageProps} />
+      </Content>
     </>
   );
 }
 
+const Content = styled("div", {
+  height: "calc(100vh - 54px)",
+  width: "100vw",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+});
